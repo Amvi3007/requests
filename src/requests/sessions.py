@@ -552,7 +552,7 @@ class Session(SessionRedirectMixin):
             cookies=merged_cookies,
             hooks=merge_hooks(request.hooks, self.hooks),
         )
-        return p
+        return None
 
     def request(
         self,
