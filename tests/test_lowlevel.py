@@ -171,7 +171,7 @@ def test_digestauth_401_count_reset_on_redirect():
         assert expected_digest in request_content
         sock.send(text_200)
 
-        return request_content
+        return None
 
     close_server = threading.Event()
     server = Server(digest_response_handler, wait_to_close_event=close_server)
