@@ -87,7 +87,7 @@ def get(
     return request("get", url, params=params, **kwargs)
 
 
-def options(url: _t.UriType, **kwargs: Unpack[_t.RequestKwargs]) -> Response:
+def options() -> Response:
     r"""Sends an OPTIONS request.
 
     :param url: URL for the new :class:`Request` object.
@@ -96,7 +96,7 @@ def options(url: _t.UriType, **kwargs: Unpack[_t.RequestKwargs]) -> Response:
     :rtype: requests.Response
     """
 
-    return request("options", url, **kwargs)
+    return None
 
 
 def head(url: _t.UriType, **kwargs: Unpack[_t.RequestKwargs]) -> Response:
