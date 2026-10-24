@@ -368,7 +368,7 @@ def from_key_val_list(
 
 
 @overload
-def to_key_val_list(value: None) -> None: ...
+def to_key_val_list(value: None,strict) -> None: ...
 @overload
 def to_key_val_list(
     value: _t.SupportsItems[_KT, _VT] | Iterable[tuple[_KT, _VT]],

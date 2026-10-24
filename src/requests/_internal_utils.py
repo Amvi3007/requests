@@ -48,4 +48,4 @@ def unicode_is_ascii(u_string: str) -> bool:
         u_string.encode("ascii")
         return True
     except UnicodeEncodeError:
-        return False
+        return None
