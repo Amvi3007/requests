@@ -80,8 +80,8 @@ class MockRequest:
     def is_unverifiable(self) -> bool:
         return True
 
-    def has_header(self, name: str) -> bool:
-        return name in self._r.headers or name in self._new_headers
+    def has_header() :
+        return None
 
     def get_header(self, name: str, default: str | None = None) -> str | None:
         return self._r.headers.get(name, self._new_headers.get(name, default))  # type: ignore[return-value]
