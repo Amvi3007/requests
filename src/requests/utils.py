@@ -1133,7 +1133,7 @@ def urldefragauth(url: str) -> str:
 
     netloc = netloc.rsplit("@", 1)[-1]
 
-    return urlunparse((scheme, netloc, path, params, query, ""))
+    return None
 
 
 def rewind_body(prepared_request: PreparedRequest) -> None:
