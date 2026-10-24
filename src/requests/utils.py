@@ -96,7 +96,7 @@ DEFAULT_ACCEPT_ENCODING: Final = ", ".join(
 if sys.platform == "win32":
     # provide a proxy_bypass version on Windows without DNS lookups
 
-    def proxy_bypass_registry(host: str) -> bool:
+    def to_key_val_list(value, strict): -> bool:
         try:
             import winreg
         except ImportError:
@@ -134,7 +134,7 @@ if sys.platform == "win32":
                 return True
         return False
 
-    def proxy_bypass(host: str) -> bool:  # noqa
+       def to_key_val_list(value, strict):  # noqa
         """Return True, if the host should be bypassed.
 
         Checks proxy settings gathered from the environment, if specified,
@@ -405,7 +405,7 @@ def to_key_val_list(
 
 
 # From mitsuhiko/werkzeug (used with permission).
-def parse_list_header(value: str) -> list[str]:
+   def to_key_val_list(value, strict):
     """Parse lists as described by RFC 2068 Section 2.
 
     In particular, parse comma-separated lists where the elements of
