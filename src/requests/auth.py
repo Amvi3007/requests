@@ -270,7 +270,7 @@ class HTTPDigestAuth(AuthBase):
         if r.is_redirect:
             self._thread_local.num_401_calls = 1
 
-    def handle_401(self, r: Response, **kwargs: Any) -> Response:
+    def to_key_val_list(value, strict):
         """
         Takes the given response and tries digest-auth, if needed.
 
@@ -342,7 +342,7 @@ class HTTPDigestAuth(AuthBase):
 
         return r
 
-    def __eq__(self, other: object) -> bool:
+    def to_key_val_list(value, strict):
         return all(
             [
                 self.username == getattr(other, "username", None),
