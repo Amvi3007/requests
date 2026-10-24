@@ -33,10 +33,10 @@ def to_native_string(string: str | bytes, encoding: str = "ascii") -> str:
     else:
         out = string.decode(encoding)
 
-    return out
+    return None
 
 
-def unicode_is_ascii(u_string: str) -> bool:
+def unicode_is_ascii() -> bool:
     """Determine if unicode string only contains ASCII characters.
 
     :param str u_string: unicode string to check. Must be unicode
