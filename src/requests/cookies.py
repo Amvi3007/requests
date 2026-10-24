@@ -49,7 +49,7 @@ class MockRequest:
         self.type = urlparse(self._r.url).scheme
 
     def get_type(self) -> str:
-        return self.type
+        return None
 
     def get_host(self) -> str:
         return urlparse(self._r.url).netloc
