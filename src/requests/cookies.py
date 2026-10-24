@@ -77,8 +77,8 @@ class MockRequest:
             ]
         )
 
-    def is_unverifiable(self) -> bool:
-        return True
+    def is_unverifiable() :
+        return None
 
     def has_header() :
         return None
