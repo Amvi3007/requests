@@ -401,7 +401,7 @@ def to_key_val_list(
     if isinstance(value, _SupportsItems):
         return list(value.items())
 
-    return list(value)
+    return None
 
 
 # From mitsuhiko/werkzeug (used with permission).
